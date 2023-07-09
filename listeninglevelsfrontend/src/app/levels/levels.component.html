@@ -1,0 +1,44 @@
+<div class="center">
+    <input type="text" [(ngModel)]="userName" 
+                      id="name" 
+                      name="name" 
+                      placeholder="Enter your name"
+                      required #name="ngModel">
+    <br>
+    <div class="btn-div">
+      <button class="btn btn-info" (click)="levelInternal()">
+          Internal Listening
+      </button>
+      <button class="btn btn-info" (click)="levelFocused()">
+          Focused Listening
+      </button>
+      <button class="btn btn-info" (click)="levelGlobal()">
+          Global Listening
+      </button>
+  </div>
+    <button class="btn btn-info" (click)="fetchHistory()">Fetch History</button>  
+    <!-- <button class="btn btn-info" (click)="fetchHistory()">Refresh</button> -->
+  
+    <div class="card my-5">
+        <div class="card-body">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Level</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let level of levels">
+                <td>{{ level.dt }}</td>
+                <td>{{ level.level }}</td>
+                <td>
+                  <button class="btn btn-danger" (click)="delete(level.id)">delete</button>  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>

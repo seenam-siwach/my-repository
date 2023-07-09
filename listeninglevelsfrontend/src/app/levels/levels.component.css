@@ -1,0 +1,15 @@
+.btn-div {
+    margin: 10px;
+    align-items: center;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
